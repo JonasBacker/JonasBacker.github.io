@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<title>Årreberg AS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>Årreberg AS</b> Arkitektur siden 1914</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="referanser.html" class="w3-bar-item w3-button">Referanser</a>
+      <a href="Historikk.html" class="w3-bar-item w3-button">Historikk</a>
+      <a href="Journal.html" class="w3-bar-item w3-button">Journal</a>
+	  <a href="Byggesøknader.html" class="w3-bar-item w3-button">Byggesøknader</a>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container">
+  <h2 style="margin-top: 85px;">Aktuelle referanseprosjekter</h2>
+  
+  <div class="w3-row-padding">
+  
+    <div class="w3-col 24 m6 w3-margin-bottom">
+      <p>Privat bolig: Våningshus på 65/4 Barstad i Egersund,  Skjævelandsveien 7, Vikeså.</p>
+
+<p>Offentlig: Skoler i flere kommuner bl.a. Time, Stavanger, Sandnes, Rogaland fylkeskommune.</p>
+
+<p>Industri: Grieg Seafood Stjernelaks, Helgøy.</p>
+
+<p>Antikvarisk rehabilitering: Verneverdig tun Pittergarden, Vikeså. Lindøy , institusjon</p>
+
+<p>Rehabilitering: Solborg Folkehøgskole, Stavanger.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Slideshow -->
+
+<div class="w3-content w3-display-container" style="margin-bottom: 100px;">
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide1.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Enebolig, Vikeså, Nybygg.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide2.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Enebolig, Barstad, Nybygg.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide3.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Solborg Folkehøgskole
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide4.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Solborg Svømmehall
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide5.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Enebolig, Barstad, Nybygg.
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide6.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Frøyland skule, Aula, Nybygg og Rehabilitering
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide7.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Barstad
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide8.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Frøyland skule, Aula, Nybygg og Rehabilitering
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide9.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Eiganes Nærmiljøsenter
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images\slide10.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Enebolig Barstad
+  </div>
+</div>
+
+
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+ 
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-bottom">
+  <p>Pittervegen 4, 4389 Vikeså | aarreberg.as@dabb.no | (+47) 48181804, 51521207, 92832771</p>
+</footer>
+
+</body>
+</html>
