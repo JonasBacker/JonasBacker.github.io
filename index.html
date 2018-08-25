@@ -24,14 +24,13 @@
 
 <div class="w3-top" style="z-index:-1">
 	
-  <img class="mySlides" src="image\1.jpg" style="width:100%">
-  <img class="mySlides" src="image\2.JPG" style="width:100%">
-  <img class="mySlides" src="image\3.JPG" style="width:100%">
-  <img class="mySlides" src="image\4.JPG" style="width:100%">
-  <img class="mySlides" src="image\5.JPG" style="width:100%">
-  <img class="mySlides" src="image\6.JPG" style="width:100%">
-  <img class="mySlides" src="image\7.jpg" style="width:100%">
-  <img class="mySlides" src="image\8.jpg" style="width:100%">
+  <img class="mySlides" src="image\1.jpg" style="width:100%; opacity:0.1">
+  <img class="mySlides" src="image\2.jpg" style="width:100%; opacity:0.1">
+  <img class="mySlides" src="image\3.jpg" style="width:100%; opacity:0.1">
+  <img class="mySlides" src="image\4.jpg" style="width:100%; opacity:0.1">
+  <img class="mySlides" src="image\5.jpg" style="width:100%; opacity:0.1">
+  <img class="mySlides" src="image\6.jpg" style="width:100%; opacity:0.1">
+  <img class="mySlides" src="image\7.jpg" style="width:100%; opacity:0.1">
 </div>
 
 
@@ -46,10 +45,40 @@ function carousel() {
        x[i].style.display = "none";  
     }
     myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 2500); // Change image every 2.5 seconds
+    if (myIndex > x.length) {myIndex = 1}   
+	
+	
+    unfade(x[myIndex-1]);
+    setTimeout(carousel, 5000); // Change image every 3 seconds
+	}
+	
+function unfade(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 35);
 }
+	
+function fade(element) {
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            element.style.display = 'none';
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op -= op * 0.1;
+    }, 70);
+}
+	
+
 </script>
 
 
@@ -57,7 +86,7 @@ function carousel() {
 
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16 w3-bottom">
+<footer class="w3-center w3-black w3-bottom">
   <p style="margin-right: 30px;" class="w3-opacity">Pittervegen 4, 4389 Vikeså | aarreberg.as@dabb.no | (+47) 48181804, 51521207, 92832771</p>
 </footer>
 
